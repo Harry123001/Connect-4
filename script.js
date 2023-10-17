@@ -81,7 +81,7 @@ function checkWinner() {
     }
 
     // vertical
-    for (let i = 0; i < columns; i++) {
+    for (let x = 0; x < columns; x++) {
         for (let i = 0; i < rows - 3; i++) {
             if (board[i][x] != ' ') {
                 if (board[i][x] == board[i+1][x] && board[i+1][x] == board[i+2][x] && board[i+2][x] == board[i+3][x]) {
