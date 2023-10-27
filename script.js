@@ -12,10 +12,10 @@ let currColumns = []; //keeps track of which row each column is at.
 window.onload = function() {
     setGame();
 }
-
+//Starts the game here 
 function setGame() {
     board = [];
-    currColumns = [5, 5, 5, 5, 5, 5, 5];
+    currColumns = [5, 5, 5, 5, 5, 5, 5]; //Columns starts at 5
 
     for (let i = 0; i < rows; i++) {
         let row = [];
@@ -69,6 +69,7 @@ function setPiece() {
 function checkWinner() {
     // Used sliding window algo
      // horizontal
+     // basically shifts 
        for (let i = 0; i < rows; i++) {
          for (let x = 0; x < columns - 3; x++){
             if (board[i][x] != ' ') {
